@@ -30,10 +30,14 @@ for(i = 1; i<=3; i++){
     console.log(button);
     createButton.className = "bottone" + i;
     createButton.append('MILESTONE ', i)
-
+    //div creator
+    const createDiv = document.createElement('div');
+    console.log(createDiv);
+    createDiv.className = "div" + i;
     //button adder
     const body = document.querySelector('body');
     body.append(createButton);
+    body.append(createDiv)
 }
 
 // calling the buttons
@@ -57,6 +61,10 @@ btn1.addEventListener('click', function(){
     for(let i = 0; i <= limit; i++){
         if(!(i%3) && (i%5)){
             console.log('divisibile per 5 e 3',i)
+            let titles = document.createElement("h1");
+            titles.append('FizzBuzz');
+            console.log(titles)
+            btn1.append(titles)
         }else if(!(i % 3)){
             console.log('divisibile per 3',i)
         } else if(!(i % 5)){
