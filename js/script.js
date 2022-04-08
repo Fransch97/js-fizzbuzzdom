@@ -21,7 +21,27 @@
 const limit = 100;
 const button = document.querySelector('button');
 // button.append('funziono');
-console.log(button);
+
+//playng my rules
+for(i = 1; i<=3; i++){
+
+    //button creator
+    const createButton = document.createElement('button');
+    console.log(button);
+    createButton.className = "bottone" + i;
+    createButton.append('MILESTONE ', i)
+
+    //button adder
+    const body = document.querySelector('body');
+    body.append(createButton);
+}
+
+// calling the buttons
+    const btn1 = document.querySelector('.bottone1');
+    const btn2 = document.querySelector('.bottone2');
+    const btn3 = document.querySelector('.bottone3');
+
+
 
 button.addEventListener('click', function(){
     for(let i = 0; i <= limit; i++){
@@ -32,3 +52,9 @@ button.addEventListener('click', function(){
 // **MILESTONE 1**
 // Per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
 // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
+
+btn1.addEventListener('click', function(){
+    for(let i = 0; i <= limit; i++){
+
+    }
+})
