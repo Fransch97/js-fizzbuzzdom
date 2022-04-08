@@ -34,7 +34,7 @@ for(i = 1; i<=3; i++){
     const createDiv = document.createElement('div');
     console.log(createDiv);
     createDiv.className = "div" + i;
-    //button adder
+    //button and div adder
     const body = document.querySelector('body');
     body.append(createButton);
     body.append(createDiv)
@@ -44,6 +44,11 @@ for(i = 1; i<=3; i++){
     const btn1 = document.querySelector('.bottone1');
     const btn2 = document.querySelector('.bottone2');
     const btn3 = document.querySelector('.bottone3');
+
+// calling the divs
+    const div1 = document.querySelector('.div1');
+    const div2 = document.querySelector('.div2');
+    const div3 = document.querySelector('.div3');
 
 
 
@@ -64,11 +69,19 @@ btn1.addEventListener('click', function(){
             let titles = document.createElement("h1");
             titles.append('FizzBuzz');
             console.log(titles)
-            btn1.append(titles)
+            div1.append(titles)
         }else if(!(i % 3)){
             console.log('divisibile per 3',i)
+            let titles = document.createElement("h1");
+            titles.append('Fizz');
+            console.log(titles)
+            div1.append(titles)
         } else if(!(i % 5)){
             console.log('divisibile per 5',i)
+            let titles = document.createElement("h1");
+            titles.append('Buzz');
+            console.log(titles)
+            div1.append(titles)
 
         }
     }
