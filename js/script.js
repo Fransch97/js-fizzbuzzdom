@@ -112,26 +112,26 @@ btn3.addEventListener('click', function(){
     for(i = 1; i<= limit; i++){
         if(!(i%3) && (i%5)){
             let box = document.createElement("div");
-            box.append("3&&5");
-            box.style.cssText = "width: 150px; height: 150px; background-color: yellowgreen; font-size: 50px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
+            box.append("FizzBuzz");
+            box.style.cssText = "width: 150px; height: 150px; background-color: yellowgreen; font-size: 30px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
             console.log(box)
             div3.append(box)
         }else if(!(i%3)){
             let box = document.createElement("div");
-            box.append("3");
+            box.append("Fizz");
             box.style.cssText = "width: 150px; height: 150px; background-color: yellow; font-size: 70px;  display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
             console.log(box)
             div3.append(box)
         }else if(!(i % 5)){
             let box = document.createElement("div");
-            box.append("5");
+            box.append("Buzz");
             box.style.cssText = "width: 150px; height: 150px; background-color: bisque; font-size: 70px;  display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px; color: brown; "
             console.log(box)
             div3.append(box)
 
         }else{
             let box = document.createElement("div");
-            box.append(i + " can't with 3 ore 5 ");
+            box.append(i + " Not Fizz/Buzz ");
             box.style.cssText = "width: 150px; height: 150px; background-color: red; font-size: 18px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
             console.log(box)
             div3.append(box)
