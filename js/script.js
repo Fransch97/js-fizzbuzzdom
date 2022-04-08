@@ -55,6 +55,11 @@ button.addEventListener('click', function(){
 
 btn1.addEventListener('click', function(){
     for(let i = 0; i <= limit; i++){
+        if(!(i % 3)){
+            console.log('divisibile per 3',i)
+        } else if(!(i % 5)){
+            console.log('divisibile per 5',i)
 
+        }
     }
 })
