@@ -34,6 +34,7 @@ for(i = 1; i<=3; i++){
     const createDiv = document.createElement('div');
     console.log(createDiv);
     createDiv.className = "div" + i;
+    createDiv.style.cssText = "width:100%; display:flex; flex-wrap: wrap; justify-content: space-around"
     //button and div adder
     const body = document.querySelector('body');
     body.append(createButton);
@@ -70,19 +71,39 @@ btn1.addEventListener('click', function(){
             titles.append('FizzBuzz');
             console.log(titles)
             div1.append(titles)
+            titles.style.cssText = "margin-right:20px";
+
         }else if(!(i % 3)){
             console.log('divisibile per 3',i)
             let titles = document.createElement("h1");
             titles.append('Fizz');
             console.log(titles)
             div1.append(titles)
+            titles.style.cssText = "margin-right:20px";
         } else if(!(i % 5)){
             console.log('divisibile per 5',i)
             let titles = document.createElement("h1");
             titles.append('Buzz');
             console.log(titles)
             div1.append(titles)
+            titles.style.cssText = "margin-right:20px";
 
         }
     }
+
 })
+
+// **MILESTONE 2**
+// Dato un container nel DOM, appendi un elemento html con il numero o la stringa corretta.
+
+btn2.addEventListener('click', function(){
+    for(let i = 0; i <= limit; i++){
+            let box = document.createElement("div");
+            box.append(i);
+            box.style.cssText = "width: 150px; height: 150px; background-color: red; font-size: 100px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
+            console.log(box)
+            div2.append(box)
+    }
+})
+// **MILESTONE 3**
+// Applica uno stile differente a seconda del valore dell’indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
