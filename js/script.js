@@ -64,7 +64,7 @@ button.addEventListener('click', function(){
 // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
 btn1.addEventListener('click', function(){
-    for(let i = 0; i <= limit; i++){
+    for(let i = 1; i <= limit; i++){
         if(!(i%3) && (i%5)){
             console.log('divisibile per 5 e 3',i)
             let titles = document.createElement("h1");
@@ -97,7 +97,7 @@ btn1.addEventListener('click', function(){
 // Dato un container nel DOM, appendi un elemento html con il numero o la stringa corretta.
 
 btn2.addEventListener('click', function(){
-    for(let i = 0; i <= limit; i++){
+    for(let i = 1; i <= limit; i++){
             let box = document.createElement("div");
             box.append(i);
             box.style.cssText = "width: 150px; height: 150px; background-color: red; font-size: 100px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
@@ -107,3 +107,34 @@ btn2.addEventListener('click', function(){
 })
 // **MILESTONE 3**
 // Applica uno stile differente a seconda del valore dell’indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
+
+btn3.addEventListener('click', function(){
+    for(i = 1; i<= limit; i++){
+        if(!(i%3) && (i%5)){
+            let box = document.createElement("div");
+            box.append("3&&5");
+            box.style.cssText = "width: 150px; height: 150px; background-color: yellowgreen; font-size: 50px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
+            console.log(box)
+            div3.append(box)
+        }else if(!(i%3)){
+            let box = document.createElement("div");
+            box.append("3");
+            box.style.cssText = "width: 150px; height: 150px; background-color: yellow; font-size: 70px;  display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
+            console.log(box)
+            div3.append(box)
+        }else if(!(i % 5)){
+            let box = document.createElement("div");
+            box.append("5");
+            box.style.cssText = "width: 150px; height: 150px; background-color: bisque; font-size: 70px;  display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px; color: brown; "
+            console.log(box)
+            div3.append(box)
+
+        }else{
+            let box = document.createElement("div");
+            box.append(i + " can't with 3 ore 5 ");
+            box.style.cssText = "width: 150px; height: 150px; background-color: red; font-size: 18px; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 20px "
+            console.log(box)
+            div3.append(box)
+        }
+    }
+})
